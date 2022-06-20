@@ -7,7 +7,12 @@ const TaskList = ({tasks , handleTaskConditionClick, handleTaskRemove}) => {
 
     return (
         <>
-            {tasks.map(task => <Task task={task} handleTaskConditionClick={handleTaskConditionClick} handleTaskRemove={handleTaskRemove}/>)}
+            {tasks.map(task => 
+                <Task 
+                    key={task.id}
+                    task={task} 
+                    handleTaskConditionClick={handleTaskConditionClick} 
+                    handleTaskRemove={handleTaskRemove}/>)}
         </>
     );
 }
